@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="David Oduor's WDD231 home page showcasing web development coursework and projects.">
+    <meta name="author" content="David Oduor">
+    <title>David Oduor | WDD231</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Style Sheets -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <!-- JavaScript Files -->
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/course.js" defer></script>
+  </head>
+  <body>
+
+    <header>
+      <img src="images/logo.svg" alt="site logo" width="1" height="1">
+      <span>David Oduor</span>
+      <button id="nav-button" class="hamburger" aria-label="navigation"></button>
+    </header>
+
+    <nav id="nav-bar" class="navigation">
+      <ul>
+        <li class="current"><a href="index.html">Home</a></li>
+        <li><a href="chamber/index.html">Chamber</a></li>
+        <li><a href="final/index.html">Final Project</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <h1>Home</h1>
+
+      <!-- About Me + Student Photo -->
+      <div class="about-grid">
+        <section class="about-me">
+          <h2>About Me</h2>
+          <p>I am David Oduor, an Education and Community Development professional from Nairobi, Kenya, currently pursuing a B.Sc. in Software Engineering at the University of Idaho. I am passionate about using technology to bridge gaps in access to education. I speak English and Swahili, and I am excited to grow my web development skills through this program.</p>
+        </section>
+
+        <section class="student-photo">
+          <h2>Student Photo</h2>
+          <img src="images/david.webp" alt="David Oduor student photo">
+        </section>
+      </div>
+
+      <!-- Web Certificate Courses -->
+      <section class="courses">
+        <h2>Web and Computer Programming Certificate</h2>
+
+        <div class="filter-buttons">
+          <button id="btn-all" class="filter-btn active">All Courses</button>
+          <button id="btn-wdd" class="filter-btn">WDD Courses</button>
+          <button id="btn-cse" class="filter-btn">CSE Courses</button>
+        </div>
+
+        <!-- Credit total appears ABOVE the cards -->
+        <p id="credit-total"></p>
+
+        <div id="course-cards"></div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="social-links">
+        <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+          <img src="images/linkedin.svg" alt="LinkedIn" width="32" height="32">
+        </a>
+        <a href="https://github.com" target="_blank" aria-label="GitHub">
+          <img src="images/github.svg" alt="GitHub" width="32" height="32">
+        </a>
+        <a href="https://twitter.com" target="_blank" aria-label="X / Twitter">
+          <img src="images/x.svg" alt="X" width="32" height="32">
+        </a>
+      </div>
+      <p>
+        &copy; <span id="currentyear"></span> &bull; David Oduor &bull; Kenya
+      </p>
+      <p id="lastModified"></p>
+    </footer>
+
+  </body>
+</html>

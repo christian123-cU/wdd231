@@ -1,0 +1,257 @@
+/* ----------------  COLOR SCHEME  ----------------
+   midnight navy   #1a3c5e
+   terracotta      #e07a5f
+   off-white       #f2f7fb
+   light grey      #eee
+   border          #ddd
+*/
+
+/************************** SITE WIDE **************************/
+* {
+  font-family: "Josefin Sans", "Segoe UI", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f2f7fb;
+  color: #1a3c5e;
+  margin: 0;
+}
+
+/************************** HEADER **************************/
+header {
+  display: grid;
+  grid-template-columns: 24px auto 44px;
+  align-items: end;
+  background-color: #1a3c5e;
+  border-bottom: solid 1px #ddd;
+  padding: 5px 10px;
+  column-gap: 8px;
+}
+
+header img {
+  display: block;
+  width: 100%;
+  height: auto;
+  filter: brightness(0) invert(1);
+}
+
+header span {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #f2f7fb;
+  letter-spacing: 0.03em;
+}
+
+/******************** HAMBURGER ********************/
+.hamburger {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  font-family: Verdana, sans-serif;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.hamburger::before {
+  content: "\2630";
+  color: #f2f7fb;
+}
+
+.hamburger.show::before {
+  content: "\00D7";
+  color: #e07a5f;
+}
+
+/********************** NAVIGATION **********************/
+.navigation {
+  display: none;
+}
+
+.navigation.show {
+  display: block;
+}
+
+.navigation ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation a {
+  display: block;
+  padding: .8rem 10px;
+  color: #1a3c5e;
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: solid 1px #ddd;
+  min-height: 44px;
+  background-color: #f2f7fb;
+  transition: background-color 0.2s;
+}
+
+.navigation a:hover,
+.navigation a:focus {
+  background-color: #dde3ea;
+  outline: none;
+}
+
+/* Wayfinding */
+.navigation li.current a {
+  background-color: #eee;
+  font-weight: 700;
+  color: #1a3c5e;
+}
+
+/************************** MAIN **************************/
+h1 {
+  margin-left: 10px;
+}
+
+main {
+  padding: 16px 10px;
+}
+
+/* About Me + Student Photo stacked on mobile */
+.about-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+section {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+section h2 {
+  background-color: #1a3c5e;
+  color: #f2f7fb;
+  margin: 0;
+  padding: 10px 14px;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.about-me p {
+  padding: 14px;
+  margin: 0;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.student-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Courses section */
+.courses {
+  margin-top: 16px;
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 10px;
+  padding: 12px 10px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  flex: 1;
+  padding: 8px 16px;
+  background-color: #f2f7fb;
+  border: 2px solid #1a3c5e;
+  border-radius: 6px;
+  font-weight: 700;
+  font-family: "Josefin Sans", sans-serif;
+  color: #1a3c5e;
+  cursor: pointer;
+  min-height: 44px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background-color: #1a3c5e;
+  color: #f2f7fb;
+}
+
+/* Course cards grid — single column on mobile */
+#course-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+  padding: 0 10px 10px;
+}
+
+.course-card {
+  padding: 12px 16px;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+/* Completed — light cream with checkmark */
+.course-card.completed {
+  background-color: #f5f0e8;
+  color: #5a4a3a;
+  border: 1px solid #d4c5a9;
+}
+
+/* Not yet completed — terracotta */
+.course-card.not-completed {
+  background-color: #e07a5f;
+  color: #fff;
+  border: none;
+}
+
+#credit-total {
+  text-align: center;
+  font-size: 0.9rem;
+  padding: 4px 10px 14px;
+  margin: 0;
+  color: #4a5568;
+}
+
+/************************** FOOTER **************************/
+footer {
+  background-color: #1a3c5e;
+  color: #f2f7fb;
+  text-align: center;
+  padding: 20px 10px;
+  margin-top: 24px;
+  font-size: 0.85rem;
+}
+
+footer p {
+  margin: 4px 0;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.social-links a img {
+  width: 36px;
+  height: 36px;
+  filter: brightness(0) invert(1);
+  transition: opacity 0.2s;
+}
+
+.social-links a:hover img {
+  opacity: 0.7;
+}

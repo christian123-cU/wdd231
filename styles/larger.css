@@ -1,0 +1,70 @@
+/* larger.css — screens 38rem (≈608px) and wider */
+
+@media only screen and (min-width: 38rem) {
+
+  /* Constrain all sections, centred */
+  header, main, nav, footer {
+    max-width: 980px;
+    margin: 0 auto;
+  }
+
+  /* Header: drop hamburger column */
+  header {
+    grid-template-columns: 24px auto;
+    padding: 8px 20px;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  /* Navigation always visible, horizontal */
+  .navigation {
+    display: block;
+    border-bottom: solid 1px #eee;
+    max-width: 980px;
+    margin: 0 auto;
+  }
+
+  .navigation ul {
+    display: flex;
+  }
+
+  .navigation a {
+    border: none;
+    padding: 10px 18px;
+  }
+
+  .navigation a:hover {
+    background-color: transparent;
+    color: #e07a5f;
+  }
+
+  /* Wayfinding on large screen — highlighted tab */
+  .navigation li.current a {
+    background-color: #1a3c5e;
+    color: #f2f7fb;
+    border-bottom: 3px solid #e07a5f;
+  }
+
+  /* About Me + Student Photo side by side */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 16px;
+    align-items: start;
+  }
+
+  /* Course cards — 3 columns on large screen */
+  #course-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  main {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+}

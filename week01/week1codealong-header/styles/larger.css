@@ -1,0 +1,39 @@
+/* larger.css — applied when screen width is 640px or wider */
+
+@media (min-width: 640px) {
+
+  /************************** HAMBURGER — hidden on large screens **************************/
+  .hamburger {
+    display: none;
+  }
+
+  /************************** NAVIGATION — horizontal on large screens **************************/
+  nav {
+    display: block !important;   /* always visible; overrides the mobile hidden state */
+  }
+
+  nav .site-wrapper {
+    flex-direction: row;
+    align-items: center;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  nav a {
+    border-top: none;
+    padding: 10px 16px 10px 0;
+  }
+
+  nav a:first-child {
+    padding-left: 0;
+  }
+
+  /************************** MAIN **************************/
+  main {
+    padding: 32px 24px;
+  }
+
+  main h1 {
+    font-size: 2.2rem;
+  }
+}

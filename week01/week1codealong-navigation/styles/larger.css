@@ -1,0 +1,42 @@
+/* larger.css — applied when screen is at least 38rem wide */
+
+@media only screen and (min-width: 38rem) {
+
+  /* All major sections: centred, max-width, side margin */
+  header, main, nav, footer {
+    max-width: 980px;
+    margin: 0 auto;
+  }
+
+  /* Header: drop the hamburger column — just logo + site name */
+  header {
+    grid-template-columns: 24px auto;
+  }
+
+  /* Hide the hamburger button */
+  .hamburger {
+    display: none;
+  }
+
+  /* Navigation: always visible, with a subtle bottom border */
+  .navigation {
+    display: block;
+    border-bottom: solid 1px #eee;
+  }
+
+  /* Links go horizontal */
+  .navigation ul {
+    display: flex;
+  }
+
+  /* Remove the mobile bottom border from each link */
+  .navigation a {
+    border: none;
+  }
+
+  /* Wayfinding: highlight the current page tab */
+  .navigation li.current a {
+    background-color: #e07a5f;
+    color: #f2f7fb;
+  }
+}
