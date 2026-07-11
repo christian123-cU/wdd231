@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Business Directory | Nairobi Chamber of Commerce</title>
+  <meta name="description" content="Browse the Nairobi Chamber of Commerce business directory — search member businesses across Kilimani, Westlands, Eastleigh, Karen, and greater Nairobi.">
+  <meta name="author" content="David Oduor Ochanda">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+
+  <!-- Open Graph / Facebook meta -->
+  <meta property="og:title" content="Business Directory | Nairobi Chamber of Commerce">
+  <meta property="og:description" content="Browse member businesses across Kilimani, Westlands, Eastleigh, Karen, and greater Nairobi.">
+  <meta property="og:image" content="https://username.github.io/wdd231/chamber/images/nairobi-chamber-logo.svg">
+  <meta property="og:url" content="https://username.github.io/wdd231/chamber/directory.html">
+  <meta property="og:type" content="website">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets: normalize first, then mobile-first small.css, then larger.css for wider views -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/small.css">
+  <link rel="stylesheet" href="css/larger.css">
+
+  <script src="js/directory.js" defer></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="branding">
+      <img src="images/nairobi-chamber-logo.svg" alt="Nairobi Chamber of Commerce logo" width="42" height="42">
+      <p class="wordmark">Nairobi Chamber<span>of Commerce</span></p>
+    </div>
+
+    <div class="header-controls">
+      <button id="themeToggle" class="theme-toggle" aria-pressed="false" aria-label="Toggle dark mode">🌙</button>
+      <button id="navToggle" class="nav-toggle" aria-controls="primaryNav" aria-expanded="false" aria-label="Toggle navigation menu">☰</button>
+    </div>
+
+    <nav id="primaryNav" class="primary-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="discover.html">Discover</a></li>
+        <li><a href="directory.html" aria-current="page">Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="directory-intro">
+      <h1>Business Directory</h1>
+      <p>Explore businesses across Nairobi that are proud members of the Chamber of Commerce — from Kilimani boutiques to Westlands startups, Eastleigh wholesalers to Karen cafés.</p>
+
+      <div class="directory-controls">
+        <p id="resultsCount" aria-live="polite">Loading businesses…</p>
+        <div class="view-toggle" role="group" aria-label="Choose directory view">
+          <button id="gridBtn" aria-pressed="true">Grid</button>
+          <button id="listBtn" aria-pressed="false">List</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="directory" class="directory grid-view" aria-live="polite" aria-busy="true">
+      <!-- Member cards are rendered here by js/directory.js -->
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-info">
+      <p class="footer-org">Nairobi Chamber of Commerce</p>
+      <address>
+        Kenyatta Avenue, Nairobi CBD<br>
+        Nairobi, Kenya 00100
+      </address>
+      <p><a href="mailto:info@nairobichamber.org">info@nairobichamber.org</a></p>
+      <p><a href="tel:+254205552300">(020) 555-2300</a></p>
+    </div>
+
+    <div class="footer-social">
+      <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="Nairobi Chamber on YouTube">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.5V8.5l6.3 3.5-6.3 3.5Z"/></svg>
+      </a>
+      <a href="https://x.com" target="_blank" rel="noopener" aria-label="Nairobi Chamber on X (Twitter)">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.9 2H22l-7.2 8.2L23 22h-6.6l-5.2-6.6L5.2 22H2l7.7-8.8L1 2h6.7l4.7 6.1L18.9 2Zm-1.2 18h1.7L7.3 4H5.5l12.2 16Z"/></svg>
+      </a>
+      <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="Nairobi Chamber on LinkedIn">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14ZM7.12 20.45H3.56V9h3.56v11.45Z"/></svg>
+      </a>
+    </div>
+
+    <div class="footer-credit">
+      <p>WDD 231 Class Project</p>
+      <p>David Oduor Ochanda</p>
+      <p>&copy; <span id="year"></span> Nairobi Chamber of Commerce</p>
+      <p>Last Modification: <span id="lastModified"></span></p>
+    </div>
+  </footer>
+
+</body>
+</html>

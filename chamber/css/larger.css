@@ -1,0 +1,107 @@
+/* =========================================================
+   Nairobi Chamber of Commerce — larger.css (wider viewports)
+   ========================================================= */
+
+@media (min-width: 700px) {
+  .site-header {
+    flex-wrap: nowrap;
+    padding: 0.85rem 2rem;
+  }
+
+  .nav-toggle {
+    display: none;
+  }
+
+  .header-controls {
+    order: 0;
+  }
+
+  .primary-nav {
+    order: 0;
+    flex-basis: auto;
+    max-height: none;
+    overflow: visible;
+    margin-left: auto;
+    margin-right: 1.5rem;
+  }
+
+  .primary-nav ul {
+    flex-direction: row;
+    border-top: none;
+    margin: 0;
+    gap: 0.5rem;
+  }
+
+  .primary-nav a {
+    border-bottom: none;
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+  }
+
+  .primary-nav a:hover,
+  .primary-nav a:focus-visible {
+    background-color: var(--color-bg);
+  }
+
+  main {
+    padding: 2rem 2rem 3rem;
+  }
+
+  .directory-intro h1 {
+    font-size: 2.1rem;
+  }
+
+  .directory-controls {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .directory.grid-view {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .member-card {
+    grid-template-columns: 72px 1fr;
+    padding: 1.25rem;
+  }
+
+  .member-card img {
+    width: 64px;
+    height: 64px;
+  }
+
+  .directory.list-view .member-card {
+    grid-template-columns: 56px 1fr auto;
+    align-items: center;
+  }
+
+  .directory.list-view .member-card .card-link {
+    justify-self: end;
+    margin-top: 0;
+  }
+
+  .site-footer {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    padding: 1.75rem 2rem;
+  }
+
+  .footer-social {
+    order: 2;
+  }
+
+  .footer-credit {
+    order: 3;
+    text-align: right;
+  }
+}
+
+@media (min-width: 1000px) {
+  .directory.grid-view {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

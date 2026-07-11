@@ -1,0 +1,121 @@
+{
+  "members": [
+    {
+      "id": 1,
+      "name": "Kilimani Stitch & Style",
+      "tagline": "Contemporary East African fashion, made to order",
+      "address": "Woodlands Road, Kilimani, Nairobi",
+      "phone": "+254 700 112 233",
+      "email": "hello@kilimanistitch.co.ke",
+      "url": "https://www.kilimanistitch.co.ke",
+      "image": "kilimani-stitch-style.svg",
+      "membership": 3,
+      "founded": 2019,
+      "category": "Fashion & Retail"
+    },
+    {
+      "id": 2,
+      "name": "Eastleigh Electronics Hub",
+      "tagline": "Wholesale and retail electronics for every budget",
+      "address": "General Waruinge Street, Eastleigh, Nairobi",
+      "phone": "+254 722 445 566",
+      "email": "sales@eastleighelectronics.co.ke",
+      "url": "https://www.eastleighelectronics.co.ke",
+      "image": "eastleigh-electronics-hub.svg",
+      "membership": 2,
+      "founded": 2011,
+      "category": "Electronics & Technology"
+    },
+    {
+      "id": 3,
+      "name": "Westlands Tech Collective",
+      "tagline": "Coworking and incubation for Nairobi's next startups",
+      "address": "Ring Road, Westlands, Nairobi",
+      "phone": "+254 711 998 877",
+      "email": "team@westlandstech.co.ke",
+      "url": "https://www.westlandstech.co.ke",
+      "image": "westlands-tech-collective.svg",
+      "membership": 3,
+      "founded": 2021,
+      "category": "Technology & Coworking"
+    },
+    {
+      "id": 4,
+      "name": "Karen Garden Café",
+      "tagline": "Farm-to-table dining under the acacia trees",
+      "address": "Dagoretti Road, Karen, Nairobi",
+      "phone": "+254 733 221 004",
+      "email": "reservations@karengardencafe.co.ke",
+      "url": "https://www.karengardencafe.co.ke",
+      "image": "karen-garden-cafe.svg",
+      "membership": 1,
+      "founded": 2016,
+      "category": "Food & Hospitality"
+    },
+    {
+      "id": 5,
+      "name": "Jua Kali Metal Works",
+      "tagline": "Custom fabrication from Nairobi's skilled artisans",
+      "address": "Kamukunji Road, Industrial Area, Nairobi",
+      "phone": "+254 700 556 678",
+      "email": "orders@juakalimetalworks.co.ke",
+      "url": "https://www.juakalimetalworks.co.ke",
+      "image": "jua-kali-metal-works.svg",
+      "membership": 1,
+      "founded": 2008,
+      "category": "Manufacturing & Artisans"
+    },
+    {
+      "id": 6,
+      "name": "CBD Sacco Financial Services",
+      "tagline": "Savings, credit, and financial literacy for SMEs",
+      "address": "Kenyatta Avenue, Nairobi CBD",
+      "phone": "+254 20 555 8899",
+      "email": "info@cbdsacco.co.ke",
+      "url": "https://www.cbdsacco.co.ke",
+      "image": "cbd-sacco-financial-services.svg",
+      "membership": 2,
+      "founded": 2004,
+      "category": "Finance & Cooperatives"
+    },
+    {
+      "id": 7,
+      "name": "Kasarani Logistics & Freight",
+      "tagline": "Reliable last-mile delivery across greater Nairobi",
+      "address": "Thika Road, Kasarani, Nairobi",
+      "phone": "+254 720 334 455",
+      "email": "dispatch@kasaranilogistics.co.ke",
+      "url": "https://www.kasaranilogistics.co.ke",
+      "image": "kasarani-logistics-freight.svg",
+      "membership": 1,
+      "founded": 2014,
+      "category": "Logistics & Transport"
+    },
+    {
+      "id": 8,
+      "name": "Nairobi Green Grocers Cooperative",
+      "tagline": "Fresh produce sourced directly from local farmers",
+      "address": "Argwings Kodhek Road, Kilimani, Nairobi",
+      "phone": "+254 733 667 788",
+      "email": "hello@greengrocersnairobi.co.ke",
+      "url": "https://www.greengrocersnairobi.co.ke",
+      "image": "nairobi-green-grocers.svg",
+      "membership": 1,
+      "founded": 2018,
+      "category": "Agriculture & Food Retail"
+    },
+    {
+      "id": 9,
+      "name": "Uhuru Print & Design Studio",
+      "tagline": "Branding, signage, and print for growing businesses",
+      "address": "Moi Avenue, Nairobi CBD",
+      "phone": "+254 711 223 344",
+      "email": "studio@uhuruprint.co.ke",
+      "url": "https://www.uhuruprint.co.ke",
+      "image": "uhuru-print-design-studio.svg",
+      "membership": 2,
+      "founded": 2013,
+      "category": "Design & Print Services"
+    }
+  ]
+}
