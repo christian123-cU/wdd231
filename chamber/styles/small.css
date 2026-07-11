@@ -340,7 +340,7 @@ main {
 }
 
 .tier-gold {
-  color: #8a6d16;
+  color: #6b5410;
   background-color: rgba(201, 162, 39, 0.16);
 }
 
@@ -363,8 +363,12 @@ main {
 
 /* List view: single column, more compact rows */
 .directory.list-view .member-card {
-  grid-template-columns: auto 1fr;
-  align-items: center;
+  grid-template-columns: 1fr;
+  align-items: start;
+}
+
+.directory.list-view .member-card img {
+  display: none;
 }
 
 .directory.list-view .member-card .tagline,
