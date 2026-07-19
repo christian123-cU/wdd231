@@ -15,11 +15,21 @@
       <label for="sectionNumber">Choose a section:</label>
       <select id="sectionNumber"></select>
 
-      <button id="enrollStudent">Enroll a Student</button>
-      <button id="dropStudent">Drop a Student</button>
+      <!-- type="button" prevents any default submit-like behavior even
+           though there's no <form> here — an explicit, defensive habit,
+           since a future edit adding a <form> for styling reasons would
+           otherwise silently reintroduce a page refresh on click. -->
+      <button id="enrollStudent" type="button">Enroll a Student</button>
+      <button id="dropStudent" type="button">Drop a Student</button>
     </section>
 
-    <table id="sectionsTable">
+    <!-- aria-live="polite" on the table means screen readers announce
+         enrollment changes automatically after each click, instead of
+         requiring the user to re-navigate to the table to notice an
+         update — directly addressing the Lighthouse "offscreen/dynamic
+         content" and assistive-technology guidance from the reading. -->
+    <table id="sectionsTable" aria-live="polite">
+      <caption class="visually-hidden">Course sections, current enrollment, and instructor</caption>
       <thead>
         <tr>
           <th>Section</th>
