@@ -4,20 +4,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Business Directory | Nairobi Chamber of Commerce</title>
+  <title>Nairobi Chamber of Commerce | Home</title>
   <meta name="description"
-    content="Browse the Nairobi Chamber of Commerce business directory — search member businesses across Kilimani, Westlands, Eastleigh, Karen, and greater Nairobi.">
+    content="The Nairobi Chamber of Commerce connects and champions local businesses across Kilimani, Westlands, Eastleigh, Karen, and greater Nairobi.">
   <meta name="author" content="David Oduor Ochanda">
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
 
   <!-- Open Graph / Facebook meta -->
-  <meta property="og:title" content="Business Directory | Nairobi Chamber of Commerce">
+  <meta property="og:title" content="Nairobi Chamber of Commerce">
   <meta property="og:description"
-    content="Browse member businesses across Kilimani, Westlands, Eastleigh, Karen, and greater Nairobi.">
+    content="Connecting and championing local businesses across Kilimani, Westlands, Eastleigh, Karen, and greater Nairobi.">
   <meta property="og:image" content="https://christian123-cu.github.io/wdd231/chamber/images/nairobi-chamber-logo.svg">
-  <meta property="og:url" content="https://christian123-cu.github.io/wdd231/chamber/directory.html">
+  <meta property="og:url" content="https://christian123-cu.github.io/wdd231/chamber/index.html">
   <meta property="og:type" content="website">
 
   <!-- Fonts -->
@@ -26,13 +26,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@400;700&display=swap"
     rel="stylesheet">
 
-  <!-- Stylesheets: normalize first, then mobile-first small.css, then larger.css for wider views -->
+  <!-- Stylesheets: normalize first, then mobile-first small.css, larger.css for wider views,
+       then home.css for content that is specific to this page only -->
   <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/small.css">
   <link rel="stylesheet" href="styles/larger.css">
+  <link rel="stylesheet" href="styles/home.css">
 
   <script src="scripts/site.js" defer></script>
-  <script src="scripts/directory.js" defer></script>
+  <script src="scripts/home.js" defer></script>
 </head>
 
 <body>
@@ -51,35 +53,73 @@
 
     <nav id="primaryNav" class="primary-nav">
       <ul>
-        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html" aria-current="page">Home</a></li>
         <li><a href="discover.html">Discover</a></li>
-        <li><a href="directory.html" aria-current="page">Directory</a></li>
+        <li><a href="directory.html">Directory</a></li>
         <li><a href="join.html">Join</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <section class="directory-intro">
-      <h1>Business Directory</h1>
-      <p>Explore businesses across Nairobi that are proud members of the Chamber of Commerce — from Kilimani boutiques
-        to Westlands startups, Eastleigh wholesalers to Karen cafés.</p>
 
-      <div class="directory-controls">
-        <p id="resultsCount" aria-live="polite">Loading businesses…</p>
-        <div class="view-toggle" role="group" aria-label="Choose directory view">
-          <button id="gridBtn" aria-pressed="true">Grid</button>
-          <button id="listBtn" aria-pressed="false">List</button>
-        </div>
+    <!-- Hero: the visitor's first impression of the chamber and its purpose -->
+    <section class="hero">
+      <div class="hero-content">
+        <span class="hero-eyebrow">Nairobi Chamber of Commerce</span>
+        <h1>Where Nairobi business grows together</h1>
+        <p>We connect owners, advocate for member interests, and open doors across Kilimani, Westlands, Eastleigh,
+          Karen, and greater Nairobi.</p>
+        <a class="cta-button" href="join.html">Join the Chamber</a>
       </div>
     </section>
 
-    <section aria-labelledby="directoryHeading">
-      <h2 id="directoryHeading" class="visually-hidden">Member Businesses</h2>
-      <div id="directory" class="directory grid-view" aria-live="polite" aria-busy="true">
-        <!-- Member cards are rendered here by scripts/directory.js -->
+    <!-- Current events -->
+    <section class="home-section" aria-labelledby="eventsHeading">
+      <h2 id="eventsHeading">Upcoming Events</h2>
+      <ul class="events-list">
+        <li class="event-item">
+          <div class="event-date"><span class="day">14</span><span class="month">Aug</span></div>
+          <div>
+            <h3>Chamber Networking Breakfast</h3>
+            <p>Kilimani Bean Roasters &middot; 7:30 AM &ndash; 9:00 AM</p>
+          </div>
+        </li>
+        <li class="event-item">
+          <div class="event-date"><span class="day">21</span><span class="month">Aug</span></div>
+          <div>
+            <h3>SME Digital Skills Workshop</h3>
+            <p>Westlands Tech Hub &middot; 2:00 PM &ndash; 4:30 PM</p>
+          </div>
+        </li>
+        <li class="event-item">
+          <div class="event-date"><span class="day">05</span><span class="month">Sep</span></div>
+          <div>
+            <h3>Quarterly Members' Luncheon</h3>
+            <p>Karen Garden Café &middot; 12:00 PM &ndash; 2:00 PM</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Weather -->
+    <section class="home-section home-section--alt" aria-labelledby="weatherHeading">
+      <h2 id="weatherHeading">Nairobi Weather</h2>
+      <div class="weather-card">
+        <p id="weatherStatus" class="weather-status">Loading current weather…</p>
+        <div id="weatherCurrent" class="weather-current"></div>
+        <ul id="forecastList" class="forecast-list" aria-label="3-day forecast"></ul>
       </div>
     </section>
+
+    <!-- Member spotlights -->
+    <section class="home-section" aria-labelledby="spotlightsHeading">
+      <h2 id="spotlightsHeading">Member Spotlights</h2>
+      <div id="spotlightsGrid" class="spotlights-grid" aria-live="polite">
+        <p>Loading spotlights…</p>
+      </div>
+    </section>
+
   </main>
 
   <footer class="site-footer">
