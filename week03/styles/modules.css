@@ -1,0 +1,83 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 2rem;
+}
+
+main {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  font-size: 2rem;
+}
+
+h2 {
+  text-align: center;
+  color: #555;
+  margin-top: -0.5rem;
+}
+
+.controls {
+  background-color: #b3ecd4;
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+.controls select {
+  font-size: 1rem;
+  padding: 0.25rem 0.5rem;
+  margin-left: 0.5rem;
+}
+
+.controls button {
+  display: block;
+  width: 100%;
+  max-width: 250px;
+  margin: 1rem auto 0;
+  background-color: #1a6dcc;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.75rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.controls button:hover {
+  background-color: #145aa8;
+}
+
+.controls button:focus-visible {
+  outline: 3px solid #003366;
+  outline-offset: 2px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+thead {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+th,
+td {
+  padding: 0.75rem;
+}
+
+tbody tr:not(:last-child) {
+  border-bottom: 1px solid #ddd;
+}

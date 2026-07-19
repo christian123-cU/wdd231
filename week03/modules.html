@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WDD231 - Course Enrollment Modules</title>
+  <link rel="stylesheet" href="styles/modules.css" />
+</head>
+<body>
+  <main>
+    <h1 id="courseTitle"></h1>
+    <h2 id="courseCode"></h2>
+
+    <section class="controls">
+      <label for="sectionNumber">Choose a section:</label>
+      <select id="sectionNumber"></select>
+
+      <button id="enrollStudent">Enroll a Student</button>
+      <button id="dropStudent">Drop a Student</button>
+    </section>
+
+    <table id="sectionsTable">
+      <thead>
+        <tr>
+          <th>Section</th>
+          <th>Enrolled</th>
+          <th>Instructor</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </main>
+
+  <script type="module" src="scripts/modules.mjs"></script>
+</body>
+</html>
